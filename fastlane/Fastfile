@@ -139,10 +139,13 @@ platform :ios do
     end
 
     configure_bundle_id("LoopFollowSecond", "com.#{TEAMID}.LoopFollow.Second", [
+      Spaceship::ConnectAPI::BundleIdCapability::Type::APP_GROUPS,
       Spaceship::ConnectAPI::BundleIdCapability::Type::PUSH_NOTIFICATIONS
     ])
     
-    configure_bundle_id("LoopFollowSecond Live Activity Extension", "com.#{TEAMID}.LoopFollow.Second.LoopFollowLAExtension", [])
+    configure_bundle_id("LoopFollowSecond Live Activity Extension", "com.#{TEAMID}.LoopFollow.Second.LoopFollowLAExtension", [
+      Spaceship::ConnectAPI::BundleIdCapability::Type::APP_GROUPS
+    ])
 
   end
 
